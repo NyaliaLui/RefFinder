@@ -1,0 +1,16 @@
+# https://taskfile.dev
+
+version: '3'
+
+env:
+  MAINF: main.cc
+  EXECF: RefFinder
+
+tasks:
+  build:
+    cmds:
+      - g++ -fcoroutines -std=c++20 $MAINF -o $EXECF
+
+  clean:
+    cmds:
+      - rm $EXECF
